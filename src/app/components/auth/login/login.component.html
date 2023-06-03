@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-between h-100" [formGroup]='form'>
+    <div class="left_section">
+        <svg class="firstSvg" width="422" height="135" viewBox="0 0 422 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.1" d="M377.973 23.1043C310.261 125.951 180.707 161.577 88.828 103.869C-3.05117 46.1612 -23.6171 -83.7524 44.0949 -186.599C111.807 -289.445 241.361 -325.071 333.24 -267.364C425.119 -209.656 445.685 -79.7421 377.973 23.1043Z" stroke="white" stroke-width="7"/>
+      </svg>
+
+        <div class="d-flex flex-column justify-content-center left_section_content_wrap text-white">
+            <div class="d-flex flex-column ">
+                <h1>{{ "AUTH.LOGIN.WELCOME" | translate }}</h1>
+            </div>
+
+        </div>
+        <svg class="secondSvg" width="391" height="107" viewBox="0 0 391 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M387.5 181C387.5 229.37 356.677 273.661 305.793 306.033C254.951 338.379 184.5 358.5 106.5 358.5C28.5002 358.5 -41.9512 338.379 -92.7932 306.033C-143.677 273.661 -174.5 229.37 -174.5 181C-174.5 132.63 -143.677 88.3391 -92.7932 55.9667C-41.9512 23.6208 28.5002 3.5 106.5 3.5C184.5 3.5 254.951 23.6208 305.793 55.9667C356.677 88.3391 387.5 132.63 387.5 181Z" stroke="white" stroke-width="7"/>
+        </svg>
+
+    </div>
+    <div class="right_section">
+        <div class="d-flex flex-column justify-content-center  h-100 wrapLogin ">
+            <h1>{{ "AUTH.LOGIN.TITLE" | translate }}</h1>
+            <small class="text-muted mb-3">{{ "AUTH.LOGIN.SUBTITLE" | translate }}</small>
+            <div class="form-group mb-3 w-100">
+                <label class="text-muted mb-2" for="">{{ "AUTH.INPUT.FULLNAME" | translate }} </label>
+                <input id="emailAddress" formControlName="username" type="text" [placeholder]="'AUTH.INPUT.EMAILPLACEHOLDER' | translate" class="form-control">
+            </div>
+            <div class="form-group margin-b-1 w-100 parentPos">
+                <label class="text-muted mb-2" for="">{{ "AUTH.INPUT.PASSWORD" | translate }}
+
+              </label>
+                <input id="password" #elem formControlName="password" type="password" [placeholder]="'AUTH.INPUT.PASSWORDPLACEHOLDER' | translate" class="form-control">
+
+
+            </div>
+
+            <div class="d-flex w-100  mt-4">
+                <button class="btn btn-primary w-100 suBtn" type="submit" id="loginSubmit" [disabled]="diFlag" (click)="loginAction()">{{ "AUTH.LOGIN.BUTTON" | translate }}</button>
+            </div>
+        </div>
+    </div>
+    <div class="swtichLang">
+        <button class="langSwitch" (click)="selectLanguage('en')" *ngIf="lang == 'ar'">
+          <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+        <span>EN</span>
+      </button>
+        <button class="langSwitch" (click)="selectLanguage('ar')" *ngIf="lang == 'en'">
+          <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+        <span>AR</span>
+      </button>
+    </div>
+</div>

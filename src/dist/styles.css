@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  font-family: Montserrat;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+.toast-container .ngx-toastr {
+  width: fit-content !important;
+}
+
+.col-gap-1 {
+  column-gap: 1em;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.underlineHeader {
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.col-gap-4 {
+  column-gap: 1em;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #892a92;
+  --bs-btn-border-color: #892a92;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #892a92db;
+  --bs-btn-hover-border-color: #892a92db;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #892a92;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #892a92;
+  --bs-btn-disabled-border-color: #892a92;
+}
+
+@media only screen and (max-width: 576px) {
+  .dialog-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+}

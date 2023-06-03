@@ -1,0 +1,18 @@
+<div class="row product">
+    <div class="col-md-6 productData">
+        <h1>{{selectedProduct?.title}}</h1>
+        <span class="text-muted">
+          {{selectedProduct?.description}}
+        </span>
+        <div class="fw-600">{{'CATEGORIES.CATEGORY'|translate}} : <span class="badge badge-success">{{'CATEGORIES.'+selectedProduct?.category|translate}}</span></div>
+        <span class="fw-600">{{'PRODUCT.PRICE'|translate}} : ${{selectedProduct?.price}}</span>
+        <span class="fw-600">{{'PRODUCT.RATING'|translate}} : <span><span class="starIcon" *ngFor="let rate of [].constructor(parseInteger(selectedProduct?.rating?.rate) ? parseInteger(selectedProduct?.rating?.rate) :1 )"><i class='bx bxs-star' ></i></span></span>
+        </span>
+
+
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4 imgWrap">
+        <img class="productImage" [src]="selectedProduct?.image" alt="" srcset="">
+    </div>
+</div>

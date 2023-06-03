@@ -1,0 +1,92 @@
+::ng-deep .owl-carousel .owl-nav
+    position: absolute !important
+    top: 30%
+    display: flex
+    justify-content: space-between
+    width: 100%
+.caroselWrap
+  max-height: 300px
+  padding: 0 4em
+
+.carouselImg
+  height: 300px
+  padding: 4em
+
+
+::ng-deep .owl-theme .owl-nav [class*=owl-]
+    color: #000
+    font-size: 3em
+    margin: 0
+    padding: 0.5em
+    background: transparent
+    display: inline-block
+    cursor: pointer
+    border-radius: 50%
+    visibility: hidden
+    opacity: 0
+    transition: visibility 0s linear 300ms, opacity 300ms
+::ng-deep .owl-theme .owl-nav [class*=owl-]:hover
+  background: transparent
+  color: #000
+
+
+::ng-deep .owl-carousel:hover .owl-nav [class*=owl-]
+       opacity: 1
+       visibility: visible !important
+       transition: visibility 0s linear 0s, opacity 300ms
+
+.productDetails
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-direction: column
+    width: 100%
+    height: 100%
+    max-width: 90%
+    margin: 0 auto
+
+
+
+::ng-deep .owl-dot
+  span
+    transition: width .2s ease !important
+
+::ng-deep .active.owl-dot
+         span
+           width: 30px !important
+
+
+.catregory
+  background: #f2efe9
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding: 1em
+  cursor: pointer
+.categoryWrap
+    margin-top: 4em
+.categoryImg
+    max-width: 100px
+    min-height: 100px
+    max-height: 100px
+    position: static
+    margin-top: -70px
+hr
+  width:100%
+@media screen and (max-width: 780px)
+    .categoryImg
+        max-width: 100px
+        min-height: 100px
+        max-height: 100px
+        position: static
+        margin-top: 0
+    .carouselImg
+      display: none !important
+    .singleCat
+      margin-bottom: 2em
+::ng-deep .langSwitch .mdc-list-item__primary-text
+  color: #fff
+  display: flex
+  align-items: center
+  column-gap: 0.5em

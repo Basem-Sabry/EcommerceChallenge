@@ -1,0 +1,41 @@
+<div class="w-100 my-4">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let item of carouselItems">
+            <div class="row caroselWrap">
+                <div class="col-md-9 ">
+                    <div class="productDetails">
+                        <h1 class="productName ">{{item.title}}</h1>
+                        <span class="text-muted ">{{item.description}}</span>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <img class="carouselImg" [src]="item.image">
+
+                </div>
+
+            </div>
+        </ng-template>
+
+
+    </owl-carousel-o>
+    <div class="px-4">
+        <h2 class="text-muted my-4">{{'CATEGORIES.SELECTCATEGORY' | translate}}</h2>
+        <div class="row w-100 mx-0 categoryWrap">
+            <div class="col-md-3 singleCat" *ngFor="let category of filteredCategories">
+                <div class="catregory" [routerLink]="['../'+category.name]">
+                    <img class="categoryImg" [src]='category.img' alt="">
+                    <hr>
+                    <span>{{'CATEGORIES.'+category.name| translate}}</span>
+                </div>
+            </div>
+
+
+        </div>
+        <h2 class="text-muted my-4">{{'PRODUCT.SELECTPRODUCT'|translate}}</h2>
+        <app-all-products [Products]="allProducts"></app-all-products>
+    </div>
+
+
+
+</div>

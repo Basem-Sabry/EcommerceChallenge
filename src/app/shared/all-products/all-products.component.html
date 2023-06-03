@@ -1,0 +1,7 @@
+<div class="w-100 mx-0 row mt-4">
+    <div class="product col-md-3" *ngFor="let product of Products" [routerLink]="['/user/product/'+product.id]">
+        <span>{{shortName(product.title)}}</span>
+        <img class="productImage" [src]="product.image" alt="" srcset="">
+        <span>${{product.price}}</span>
+    </div>
+</div>

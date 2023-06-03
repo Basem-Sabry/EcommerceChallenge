@@ -1,0 +1,37 @@
+.productWrap
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  justify-content: space-between
+  padding-bottom: 4em
+  margin-top: 1.5em
+.product
+    display: flex
+    flex-direction: column
+    position: relative
+    justify-content: center
+    align-items: center
+    row-gap: 1em
+    padding: 1em 0
+    cursor: pointer
+    transition: all .35s ease-in-out
+.productImage
+  width: 150px
+  height: 150px
+.product:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 60%
+    background: #dddddd
+    width: 1px
+    height: 70%
+    transform: translateY(-50%)
+
+.product:hover
+  transform: scale(1.1)
+  box-shadow: 0 0 5px #c6c6c6
+.product:hover:before
+  width: 0
+.product:hover + .product:before
+  width: 0

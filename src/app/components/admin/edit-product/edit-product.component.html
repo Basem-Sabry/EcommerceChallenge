@@ -1,0 +1,45 @@
+<div class="container h-100 p-4 d-flex flex-column  justify-content-around">
+    <h1 class="fw-bold underlineHeader m-0"> {{'ADMIN.EDITPRODUCT'|translate}}
+    </h1>
+    <div class="row" [formGroup]="form">
+        <div class="form-group col-md-12 mb-2 ">
+            <mat-form-field class="w-100">
+                <mat-label>{{'ADMIN.PRODUCTNAME'|translate}}</mat-label>
+                <input type="text" matInput [placeholder]="'ADMIN.PRODUCTNAMEPLACEHOLDER'|translate" formControlName="title">
+                <mat-error class="" *ngIf="form.controls['title'].invalid">{{'ADMIN.VALIDATION'|translate}}</mat-error>
+
+            </mat-form-field>
+        </div>
+        <div class="form-group col-md-12 mb-2">
+            <mat-form-field class="w-100">
+                <mat-label>{{'ADMIN.PRODUCTPRICE'|translate}}</mat-label>
+                <input type="number" matInput [placeholder]="'ADMIN.PRODUCTPRICEPLACEHOLDER'|translate" formControlName="price">
+                <mat-error class="" *ngIf="form.controls['price'].invalid">{{'ADMIN.VALIDATION'|translate}}</mat-error>
+
+            </mat-form-field>
+        </div>
+        <div class="form-group col-md-12 mb-2">
+            <mat-form-field class="w-100">
+                <mat-label>{{'ADMIN.PRODUCTDESCRIPTION'|translate}}</mat-label>
+                <textarea type="text" matInput [placeholder]="'ADMIN.PRODUCTDESCRIPTIONPLACEHOLDER'|translate" formControlName="description"> </textarea>
+            </mat-form-field>
+        </div>
+        <div class="form-group col-md-12 mb-2">
+            <mat-form-field class="w-100">
+                <mat-label>{{'ADMIN.PRODUCTCATEGORY'|translate}}</mat-label>
+                <mat-select formControlName="categroy">
+                    <mat-select-trigger>
+                        {{form.value['categroy']}}
+                    </mat-select-trigger>
+
+                    <mat-option *ngFor="let categorey of Categories" [value]="categorey">{{categorey}}</mat-option>
+                </mat-select>
+                <mat-error class="" *ngIf="form.controls['categroy'].invalid">{{'ADMIN.VALIDATION'|translate}}</mat-error>
+
+            </mat-form-field>
+        </div>
+        <div class="col-md-12 d-flex justify-content-end">
+            <button class="btn btn-primary p-2 my-2" (click)="editProduct()">{{'ADMIN.EDITPRODUCT'|translate}}</button>
+        </div>
+    </div>
+</div>

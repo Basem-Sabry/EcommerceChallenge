@@ -1,0 +1,23 @@
+.wrapContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.text-co {
+  color: #52575C !important;
+  font-weight: 400;
+  font-size: 0.8;
+}
+
+.btn {
+  padding: 0.8em;
+}
+
+.mainWr {
+  width: 100%;
+  padding: 0 4em;
+}
